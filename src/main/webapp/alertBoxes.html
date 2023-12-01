@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Alert Boxes</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div style="text-align: center;width:100%">
+        <input type="button"  value="Alert Box" id="btn1" onclick="DemoAlert()" />
+        <input type="button"  value="Confirm Box"  id="btn2" onclick="DemoConfirmBox()" />
+        <input type="button"  value="Prompt Box"  id="btn3" onclick="DemoPromptBox()" />
+        
+        <p id="res"></p>
+
+    </div>
+
+    <script type="text/javascript">
+        function DemoAlert()
+        {
+            alert("This is Alert Box");
+        }
+
+        function DemoConfirmBox()
+        {
+            if(confirm("Are u sure do u want to delete ")==true)
+                document.getElementById("res").innerHTML = "Clicked Ok Button";
+            else
+               document.getElementById("res").innerHTML = "Clicked Cancel Button";
+        }
+
+        function DemoPromptBox()
+        {
+            var str = prompt("Enter Some text");
+            document.getElementById("res").innerHTML = str;
+        }
+    </script>
+</body>
+</html>
